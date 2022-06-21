@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Devfinder is an application for finding information about Github users. It's a challenge from Frontend Mentor and all assets are provided by them."
+    />
+    <title>Devfinder - Find Github User</title>
+    <link rel="icon" href="/assets/favicon-32x32.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <script src="/src/js/script.js" defer></script>
+  </head>
+  <body data-theme="light">
+    <div class="app">
+      <header class="app__header">
+        <h1 id="logo">devfinder</h1>
+        <div class="theme">
+          <div class="theme__name">Dark</div>
+          <div class="theme__icon">
+            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M19.513 11.397a.701.701 0 00-.588.128 7.496 7.496 0 01-2.276 1.336 7.101 7.101 0 01-2.583.462 7.505 7.505 0 01-5.32-2.209 7.568 7.568 0 01-2.199-5.342c0-.873.154-1.72.41-2.49a6.904 6.904 0 011.227-2.21.657.657 0 00-.102-.924.701.701 0 00-.589-.128C5.32.61 3.427 1.92 2.072 3.666A10.158 10.158 0 000 9.83c0 2.8 1.125 5.342 2.967 7.19a10.025 10.025 0 007.16 2.98c2.353 0 4.527-.822 6.266-2.183a10.13 10.13 0 003.58-5.624.623.623 0 00-.46-.796z"
+                fill-rule="nonzero"
+              />
+            </svg>
+          </div>
+        </div>
+      </header>
+      <div class="app__search">
+        <form class="form">
+          <img src="../assets/icon-search.svg" alt="Search user" />
+          <input
+            class="form__input"
+            type="text"
+            name="user"
+            id="name"
+            placeholder="Search Github username..."
+          />
+          <p class="form__error">No results</p>
+          <button class="form__btn">Search</button>
+        </form>
+      </div>
+      <main class="app__main"></main>
+    </div>
+  </body>
+</html>
