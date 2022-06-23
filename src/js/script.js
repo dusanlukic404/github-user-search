@@ -138,6 +138,16 @@ const displayUser = function (user) {
         </div>`;
 
   app.innerHTML = html;
+
+  const userInfo = document.querySelectorAll(".info li");
+  userInfo.forEach(function (info) {
+    console.log(info);
+    if (info.children[1].textContent === "Not available") {
+      const svg = info.children[0];
+      svg.classList.add("not-available");
+      info.children[1].classList.add("not-available");
+    }
+  });
 };
 
 const getUser = async function (user) {
