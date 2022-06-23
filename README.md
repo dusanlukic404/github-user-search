@@ -13,6 +13,12 @@ This is a solution to the [GitHub user search app challenge on Frontend Mentor](
 
 ## Overview
 
+Github User search app is an application for getting info about Github users. User of application should only type username in search field to get information about that user. If there is no user with username which was typed in search field, user will get an error message saying "No results".
+
+- Application is responsive so users should be able to view the optimal layout depending on their device's screen size
+- User have opportunity to change the theme between dark & light
+- First time when user open an application, theme will be displayed based on his computer preferences
+
 ### The challenge
 
 Users should be able to:
@@ -45,3 +51,4 @@ Users should be able to:
 ## Author
 
 - Frontend Mentor - [@dusanlukic404](https://www.frontendmentor.io/profile/dusanlukic404)
+- LinkedIn - [@dusan-lukic](https://www.linkedin.com/in/dusan-lukic/)
