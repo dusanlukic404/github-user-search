@@ -37,13 +37,15 @@ const displayUser = function (user) {
   const company = user.company || "Not available";
   const blog = user.blog || "Not available";
   const name = user.name || user.login;
-  const html = `<img class="user-img" src="${user.avatar_url}" alt="Profile picture of ${user.name}" />
+  const html = `
         <div class="user">
+        <header class="user-head">
+        <img class="user-img" src="${user.avatar_url}" alt="Profile picture of ${user.name}" />
           <div class="user__main">
-            <div class="user__main__name">
+            <div class="user-header">
               <h2>${name}</h2>
               <a
-                class="user__main__username"
+                class="user-username"
                 href="https://github.com/${user.login}"
                 target="_blank"
                 >@${user.login}</a
@@ -51,17 +53,18 @@ const displayUser = function (user) {
             </div>
             <p class="joined-date">Joined ${createdDate}</p>
           </div>
-          <p class="user__bio">${bio}</p>
-          <div class="user__stats">
-            <div class="user__stat">
+          </header>
+          <p class="user-bio">${bio}</p>
+          <div class="stats">
+            <div class="stats__stat">
               <h3 class="repos">Repos</h3>
               <p class="repos-num">${user.public_repos}</p>
             </div>
-            <div class="user__stat">
+            <div class="stats__stat">
               <h3 class="followers">Followers</h3>
               <p class="followers-num">${user.followers}</p>
             </div>
-            <div class="user__stat">
+            <div class="stats__stat">
               <h3 class="following">Following</h3>
               <p class="following-num">${user.following}</p>
             </div>
