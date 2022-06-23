@@ -209,7 +209,6 @@ body {
 .form__input {
   flex-grow: 1;
   border: none;
-  font-size: 1.6rem;
   color: var(--clr-heading);
   background-color: transparent;
   outline: none;
@@ -226,12 +225,11 @@ body {
 }
 
 .form__btn {
-  padding: 1rem 1.65rem;
+  padding: 0.7em 1.3em;
   color: #fff;
   background-color: var(--clr-highlight);
   border: none;
   outline: none;
-  font-size: 1.6rem;
   border-radius: 10px;
   cursor: pointer;
   transition: all 300ms ease-in;
@@ -251,7 +249,6 @@ body {
   position: absolute;
   right: 0;
   right: 12rem;
-  font-size: 1.4rem;
   color: hsl(0, 100%, 55%);
   opacity: 0;
   transition: opacity 300ms ease-in;
@@ -262,58 +259,77 @@ body {
   animation: shake 800ms ease-in-out forwards;
 }
 
+.form__input,
+.form__btn,
+.form__error,
+.user-header {
+  font-size: 1.6rem;
+}
+
 .app__main {
   padding: 4rem;
-  display: grid;
-  grid-template-columns: 30% 1fr;
-  grid-template-areas:
-    "img user"
-    "img user";
 }
 
 .user-img {
-  grid-area: "img";
   border-radius: 50%;
   width: 13rem;
 }
 
-.user {
-  grid-area: "user";
+.user-head {
+  display: flex;
+  gap: 4rem;
 }
 
 .user__main {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.user__main__name {
+.user-header {
+  font-size: 1.6rem;
+  line-height: 1.125;
+}
+
+.user-username {
+  display: inline-block;
+  color: var(--clr-highlight);
   font-size: 1.6rem;
 }
 
-.user__main__username {
-  display: inline-block;
-  color: var(--clr-highlight);
-  font-size: 1.4rem;
-}
-
 .joined-date {
-  padding-top: 1.4rem;
   font-size: 1.25rem;
   color: var(--clr-text-secondary);
   transition: background-color 300ms ease-in;
 }
 
-.user__bio {
-  margin-block: 2rem;
-  font-size: 1.2rem;
+.user-bio {
+  margin-top: -4rem;
+  margin-bottom: 2rem;
+}
+
+.stats {
+  margin-top: 4rem;
+}
+
+.user-bio,
+.stats,
+.info {
+  margin-left: 17rem;
+}
+
+.user-bio,
+.info li p,
+.info li a {
+  font-size: 1.35rem;
 }
 
 .info p,
-.app__main a {
+.info a {
   font-size: 1.2rem;
 }
 
-.user__stats {
+.stats {
   padding: 1.7rem;
   display: flex;
   gap: 7rem;
@@ -323,14 +339,14 @@ body {
   transition: background-color 300ms ease-in;
 }
 
-.user__stat h3 {
+.stats__stat h3 {
   color: var(--clr-text);
   font-size: 1.1rem;
   font-weight: 400;
   transition: background-color 300ms ease-in;
 }
 
-.user__stat p {
+.stats__stat p {
   color: var(--clr-heading);
   font-size: 1.6rem;
   font-weight: 700;
@@ -367,5 +383,91 @@ body {
   40%,
   60% {
     transform: translate3d(4px, 0, 0);
+  }
+}
+
+/* Medium devices: tablets */
+@media (max-width: 768px) {
+  .stats {
+    gap: 0;
+  }
+  .stats > * {
+    width: 100%;
+  }
+  .user__main {
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+  .app__main {
+    padding: 2.4rem;
+  }
+  .stats,
+  .info,
+  .user-bio {
+    margin-left: 0;
+  }
+  .user-bio {
+    margin-top: 2rem;
+  }
+  .user-img {
+    width: 12rem;
+  }
+  .user__main {
+    justify-content: center;
+  }
+  .stats {
+    margin-top: 2rem;
+  }
+  .user-bio,
+  .info li p,
+  .info li a {
+    font-size: 1.25rem;
+  }
+  .form__input,
+  .form__btn,
+  .form__error,
+  .user-header {
+    font-size: 1.4rem;
+  }
+  .user-head {
+    gap: 2.5rem;
+  }
+  .form img {
+    padding-left: 1rem;
+  }
+}
+
+/* Small devices - mobile */
+@media (max-width: 450px) {
+  .user-img {
+    width: 9rem;
+  }
+  .info {
+    grid-template-columns: 1fr;
+    gap: 1.85rem;
+  }
+  .user-bio,
+  .info li p,
+  .info li a {
+    font-size: 1.2rem;
+  }
+  .form__input,
+  .form__btn,
+  .form__error,
+  .user-header {
+    font-size: 1.2rem;
+  }
+  .user-head {
+    gap: 1rem;
+  }
+  .form img {
+    padding-left: 0;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 350px) {
+  .form input {
+    font-size: 1rem;
   }
 }
