@@ -141,7 +141,6 @@ const displayUser = function (user) {
 
   const userInfo = document.querySelectorAll(".info li");
   userInfo.forEach(function (info) {
-    console.log(info);
     if (info.children[1].textContent === "Not available") {
       const svg = info.children[0];
       svg.classList.add("not-available");
