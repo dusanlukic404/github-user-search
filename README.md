@@ -7,7 +7,6 @@ This is a solution to the [GitHub user search app challenge on Frontend Mentor](
 - [Overview](#overview)
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
-  - [Links](#links)
   - [Built with](#built-with)
 - [Author](#author)
 
@@ -34,10 +33,6 @@ Users should be able to:
 
 ![Screen shot on light mode](/assets/screen-light.jpg)
 ![Screen shot on dark mode](/assets/screen-dark.jpg)
-
-### Links
-
-- Solution URL: [Frontend Mentor]()
 
 ### Built with
 
